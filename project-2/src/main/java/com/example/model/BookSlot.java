@@ -21,28 +21,23 @@ public class BookSlot {
 	String name;
 	String sport;
 	
-	@Temporal(TemporalType.DATE)
-	Date date;
+	String date;
 	
-	String time;
-	
-	@Column(name = "paid")
-	boolean booked;
-	
+	@Temporal(TemporalType.TIMESTAMP)
+	Date time;
 	
 	public BookSlot() {
 		super();
 	}
 
 
-	public BookSlot(int id, String name,String sport, Date date, String time, boolean booked) {
+	public BookSlot(int id, String name,String sport, String date, Date time) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.sport = sport;
 		this.date = date;
 		this.time = time;
-		this.booked = booked;
 	}
 
 
@@ -77,34 +72,24 @@ public class BookSlot {
 	}
 
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
 
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
 
-	public String getTime() {
+	public Date getTime() {
 		return time;
 	}
 
 
-	public void setTime(String time) {
+	public void setTime(Date time) {
 		this.time = time;
 	}
 
-
-	public boolean isBooked() {
-		return booked;
-	}
-
-
-	public void setBooked(boolean booked) {
-		this.booked = booked;
-	}
-	
 	
 }
