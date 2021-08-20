@@ -1,5 +1,6 @@
 package com.example.model;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -23,15 +24,14 @@ public class BookSlot {
 	
 	String date;
 	
-	@Temporal(TemporalType.TIMESTAMP)
-	Date time;
+	String time;
 	
 	public BookSlot() {
 		super();
 	}
 
 
-	public BookSlot(int id, String name,String sport, String date, Date time) {
+	public BookSlot(int id, String name,String sport, String date, String time) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -82,12 +82,12 @@ public class BookSlot {
 	}
 
 
-	public Date getTime() {
+	public String getTime() {
 		return time;
 	}
 
 
-	public void setTime(Date time) {
+	public void setTime(String time) {
 		this.time = time;
 	}
 
